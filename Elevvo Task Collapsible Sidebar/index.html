@@ -29,14 +29,60 @@
 
                 <!--Navigation Menu-->
                 <nav class="nav" aria-label="Main Navigation"> <!--semantic HTML element for the navigation menu-->
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
+                    <p class="nav-title">Menu</p>
+
+                    <!--Home-->
+                    <a href="#home" class="nav-link active" data-page="Home" aria-current="page"> <!--semantic HTML element for the navigation link-->
+                        <i data-lucide="house"></i>
+                        <span class="link-text">Home</span>
+                    </a>
+
+                    <!--About-->
+                    <a href="#about" class="nav-link" data-page="About">
+                        <i data-lucide="user"></i>
+                        <span class="link-text">About</span>
+                    </a>
+
+                    <!--Services-->
+                    <a href="#services" class="nav-link" data-page="Services">
+                        <i data-lucide="cog"></i>
+                        <span class="link-text">Services</span>
+                    </a>
+
+                    <!--Contact-->
+                    <a href="#contact" class="nav-link" data-page="Contact">
+                        <i data-lucide="mail"></i>
+                        <span class="link-text">Contact</span>
+                    </a>
                 </nav>
+
             </aside>
+
+            <!--Mobile backdrop-->
+            <div class="backdrop" id="backdrop"></div>
+
+            <!--Main Content Area-->
+            <main class="main" id="main">
+                <header class="header">
+                    <button class="toggle-btn" id="toggleBtn" aria-label="Collapse Sidebar" aria-controls="sidebar" aria-expanded="true"> <!--semantic HTML element for the button-->
+                        <i data-lucide="menu"></i>
+                    </button>
+                    <h1 id="pageTitle">Home</h1>
+                </header>
+
+                <section class="content">
+                    <h2 id="welcomeTitle">Welcome!</h2>
+
+                    <p id="welcomeText"> Welcome to our website. Explore our menu</p>
+                    
+                    <div class="content-card">
+                        <h3 id="cardTitle">Home Page</h3>
+                        <p id="cardText">This is a simple implementation of a collapsible sidebar using HTML, CSS, and JavaScript. You can navigate through different sections using the sidebar links.</p>
+                    </div>
+                </section>
+                
+            </main>
+
         </div>
     
 <!--Script for functionality-->
