@@ -1,5 +1,121 @@
 /*Stylesheet for the collapsible sidebar*/
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Century Gothic", Futura, sans-serif;
+  background-color: #f4f6fb;
+  color: #1e293b;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    background: #172033;
+    color: #ffffff;
+    overflow: hidden;
+    transition: width 0.3s ease, transform 0.3s ease;
+    z-index: 100;
+}
+
+.sidebar.collapsed {
+    width: 75x;
+}
+
+/*logo Styles */
+.logo{
+    display: flex;
+    padding: 0 20px;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    white-space: nowrap;
+    border-bottom: 1px solid #303b50;
+    height: 60px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo-icon {
+    min-width: 35px;
+    height: 35px;
+    display: grid;
+    place-items: center;
+    background: #457B9D;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.logo-text {
+    display: inline-block;
+    transition: opacity 0.2s;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Sidebar Navigation */
+.nav {
+    display: flex;
+    flex-direction: column;
+    padding: 25px 12px;
+    flex-grow: 1;
+}
+
+.nav-title {
+    margin: 0 12px 15px;
+    font-weight: bold;
+    color: #a0aec0;
+    font-size: 14px;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    transition:opacity  0.2s;
+}
+
+.nav-link{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    height: 48px;
+    margin-bottom: 8px;
+    padding: 10px 12px;
+    white-space: nowrap;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.nav-link:hover, .nav-link.active {
+    background-color: #1e293b;
+    color: #fff;
+}
+
+.nav-link.active {
+    box-shadow: inset 3px 0 #457B9D;
+}
+
+.nav-link i {
+    width: 21px;
+    height: 21px;
+    flex-shrink: 0;
+}
+
+.link-text {
+    font-size: 16px;
+    transition: opacity 0.2s;
+}
+
 /* Sidebar Icons */
 .nav-link i { 
   width: 21px;
