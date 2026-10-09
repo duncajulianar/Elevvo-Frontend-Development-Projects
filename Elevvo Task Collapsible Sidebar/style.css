@@ -24,12 +24,13 @@ body {
     background: #172033;
     color: #ffffff;
     overflow: hidden;
-    transition: width 0.3s ease, transform 0.3s ease;
+    transition: width 0.5s ease, transform 0.3s ease;
     z-index: 100;
 }
 
 .sidebar.collapsed {
     width: 75x;
+    transition: opacity 0.4s;
 }
 
 /*logo Styles */
@@ -118,8 +119,11 @@ body {
 }
 
 /* Collapsed Sidebar Styles */
+.sidebar.collapsed,
 .sidebar.collapsed .logo-text,
+.sidebar.collapsed .logo-icon,
 .sidebar.collapsed .nav-title,
+.sidebar.collapsed .nav-link,
 .sidebar.collapsed .link-text {
     opacity: 0;
     pointer-events: none;

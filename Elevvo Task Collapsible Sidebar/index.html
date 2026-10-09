@@ -83,9 +83,33 @@
 
         </div>
     
-<!--Script for functionality-->
+<!--Script for functionality (JAVASCRIPT)-->
         <script>
         lucide.createIcons();
+
+        <!--Initialize elements-->
+        const toggleBtn = document.getElementById('toggleBtn');
+        const sidebar = document.getElementById('sidebar');
+        const main = document.getElementById('main');
+        const backdrop = document.getElementById('backdrop');
+
+        <!--Open and closing the sidebar-->
+        toggleBtn.addEventListener("click", () => {
+            if (window.innerWidth <= 768) {
+                sidebar.classList.toggle("open");
+                backdrop.classList.toggle("active");
+            } else {
+                sidebar.classList.toggle("collapsed");
+                main.classList.toggle("expanded");
+            }
+        });
+
+        <!--Close sidebar when clicking on the backdrop-->
+        backdrop.addEventListener("click", () => {
+            sidebar.classList.remove("open");
+            backdrop.classList.remove("active");
+        });
+
         </script>
 
     </body>
