@@ -25,6 +25,10 @@
                 <div class="logo">
                     <div class="logo-icon">E</div>
                     <span class="logo-text">ELEVVO</span> 
+
+                    <!-- Close Button-->
+                     <button class="close-btn" id="closeBtn" aria-label="Close menu" aria-controls="sidebar" aria-expanded="true"> 
+                        <i data-lucide="x"></i>
                 </div>
 
                 <!--Navigation Menu-->
@@ -92,11 +96,12 @@
         const sidebar = document.getElementById('sidebar');
         const main = document.getElementById('main');
         const backdrop = document.getElementById('backdrop');
+        const closeBtn = document.getElementById("closeBtn");
 
         <!--Open and closing the sidebar-->
         toggleBtn.addEventListener("click", () => {
             if (window.innerWidth <= 768) {
-                sidebar.classList.toggle("open");
+                sidebar.classList.toggle("mobile-open");
                 backdrop.classList.toggle("active");
             } else {
                 sidebar.classList.toggle("collapsed");
@@ -106,8 +111,13 @@
 
         <!--Close sidebar when clicking on the backdrop-->
         backdrop.addEventListener("click", () => {
-            sidebar.classList.remove("open");
+            sidebar.classList.remove("mobile-open");
             backdrop.classList.remove("active");
+        });
+
+        closeBtn.addEventListener("click", () => {
+            sidebar.classList.remove("mobile-open");
+            backdrop.classList.remove("visible");
         });
 
         </script>

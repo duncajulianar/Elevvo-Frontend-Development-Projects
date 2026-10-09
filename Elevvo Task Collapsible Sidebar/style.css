@@ -65,6 +65,22 @@ body {
     font-weight: bold;
 }
 
+/* Close Button Styles */
+.close-btn {
+    display: none; /* Hide the close button by default */
+    margin-left: auto;
+    padding: 5px;
+    background: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.close-btn i{
+    width: 24px;
+    height: 24px;
+}
+
 /* Sidebar Navigation */
 .nav {
     display: flex;
@@ -137,7 +153,7 @@ body {
 }
 
 .main.expanded {
-    margin-left: 75px;
+    margin-left: 0px;
 }
 
 .header {
@@ -209,18 +225,17 @@ body {
 
 /*Mobile backdrop*/
 .backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 99;
     display: none;
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+    .close-btn {
+        display: flex; /* Show the close button on mobile */
+        align-items: center;
+        justify-content: center;
+    }
+
     .sidebar, .sidebar.collapsed {
         transform: translateX(-100%);
         width: 250px;
