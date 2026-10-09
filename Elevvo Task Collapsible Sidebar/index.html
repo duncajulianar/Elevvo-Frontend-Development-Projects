@@ -7,6 +7,9 @@
         <!--Title of the page-->
         <title>Elevvo Collapsible Sidebar</title>
 
+        <!--Lucide Icons-->
+        <script src="https://unpkg.com/lucide@latest"></script>
+
         <!--Stylesheet-->
         <link rel="stylesheet" href="style.css">
 
@@ -15,13 +18,17 @@
 <!--Body of the page-->
     <body>
         <div class="app">
+            <!--Sidebar-->
             <aside class="sidebar" id="sidebar"> <!--semantic HTML element for the sidebar-->
-                <div class="logo-area">
-                    <div class="logo">E</div>
-                    <span class="logo-text">Elevvo</span> <!--Logo text-->
+
+                <!--Logo Section-->
+                <div class="logo">
+                    <div class="logo-icon">E</div>
+                    <span class="logo-text">Elevvo</span> 
                 </div>
 
-                <nav>
+                <!--Navigation Menu-->
+                <nav class="nav" aria-label="Main Navigation"> <!--semantic HTML element for the navigation menu-->
                     <ul>
                         <li><a href="#">Home</a></li>
                         <li><a href="#">About</a></li>
@@ -31,7 +38,11 @@
                 </nav>
             </aside>
         </div>
-
+    
+<!--Script for functionality-->
+        <script>
+        lucide.createIcons();
+        </script>
 
     </body>
 </html>

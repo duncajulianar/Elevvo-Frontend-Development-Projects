@@ -1,1 +1,8 @@
 /*Stylesheet for the collapsible sidebar*/
+
+/* Sidebar Icons */
+.nav-link i { 
+  width: 21px;
+  height: 21px;
+  flex-shrink: 0;
+}
