@@ -105,6 +105,7 @@ body {
     box-shadow: inset 3px 0 #457B9D;
 }
 
+/* Sidebar Icons */
 .nav-link i {
     width: 21px;
     height: 21px;
@@ -116,9 +117,59 @@ body {
     transition: opacity 0.2s;
 }
 
-/* Sidebar Icons */
-.nav-link i { 
-  width: 21px;
-  height: 21px;
-  flex-shrink: 0;
+/* Collapsed Sidebar Styles */
+.sidebar.collapsed .logo-text,
+.sidebar.collapsed .nav-title,
+.sidebar.collapsed .link-text {
+    opacity: 0;
+    pointer-events: none;
 }
+
+/*Toggle button and header*/
+.main {
+    min-height: 100vh;
+    margin-left: 250px;
+    transition: margin-left 0.3s ease;
+}
+
+.main.expanded {
+    margin-left: 75px;
+}
+
+.header {
+    height: 80px;
+    display: flex;
+    padding: 0 30px;
+    align-items: center;
+    gap: 20px;
+    background: #fff;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+/* Toggle Button Styles */
+.toggle-btn {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    background: #457B9D;
+    border: 1px solid #457B9D;
+    border-radius: 10px;
+    color:#fff;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.toggle-btn:hover {
+    background-color: #303b50;
+}
+
+.toggle-btn i {
+    width: 22px;
+    height: 22px;
+}
+
+.header h1 {
+    font-size: 22px;
+}
+
