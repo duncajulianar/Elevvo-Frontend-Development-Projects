@@ -203,4 +203,63 @@ body {
     margin-bottom: 15px;
 }
 
+/*Mobile backdrop*/
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+    display: none;
+}
 
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .sidebar, .sidebar.collapsed {
+        transform: translateX(-100%);
+        width: 250px;
+    }
+
+    .sidebar.mobile-open {
+        transform: translateX(0);
+    }
+
+    .sidebar.collapsed .logo-text, .sidebar.collapsed .nav-title, .sidebar.collapsed .link-text {
+        opacity: 1;
+        pointer-events: auto;
+
+    }
+
+    .main, .main.expanded {
+        margin-left: 0;
+    }
+
+    .backdrop.visible {
+        display: block;
+        position:fixed;
+        inset: 0;
+        z-index: 90;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .header {
+        padding: 0 15px;
+        height: 70px;
+    }
+
+    .content {
+        padding: 28px 20px;
+    }
+
+    .content h2 {
+        font-size: 24px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { /* Apply reduced motion preference and prevets the website layout from accidentally breaking or overlapping. */
+        transition: 0.01ms !important;
+    }
+}
