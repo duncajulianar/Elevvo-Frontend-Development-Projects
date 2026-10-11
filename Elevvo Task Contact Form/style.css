@@ -40,10 +40,12 @@ body h1 {
 }
 
 .form-container input,
-.form-container textarea,
-.form-container button {
+.form-container textarea {
     width: 100%;
     box-sizing: border-box;
+    padding: 10px;
+    font-family: "arial", sans-serif;
+    font-size: 14px;
 }
 
 .form-container button {
@@ -58,4 +60,53 @@ body h1 {
     transition: background-color 0.3s ease;
     width: 50%;
     align-self: center;
+}
+
+@media (max-width: 768px) {
+    body {
+        margin: 0;
+    }
+
+    .app {
+        width: 100%;
+        min-height: 100vh;
+        padding: 30px 20px;
+    }
+
+    #welcomeTitle {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .form-card {
+        width: 100%;
+        max-width: 500px;
+        padding: 25px;
+        margin: 0 auto;
+    }
+
+    .form-card h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .form-container,
+    #contactForm {
+        width: 100%;
+        min-width: 0;
+    }
+
+    #contactForm input,
+    #contactForm textarea {
+        display: block;
+        width: 100%;
+        min-width: 0;
+    }
+
+    #contactForm button {
+        width: 100%;
+        align-self: stretch;
+        color: white;
+    }
 }
