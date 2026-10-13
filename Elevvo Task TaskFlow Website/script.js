@@ -51,3 +51,9 @@ const observer = new IntersectionObserver(function (entries, observer) {
 sections.forEach(function (section) {
     observer.observe(section);
 });
+
+document.getElementById("startButton").addEventListener("click", function () {
+    document.getElementById("featureSection").scrollIntoView({
+        behavior: "smooth"
+    });
+});
