@@ -60,7 +60,7 @@ header {
     display: flex;
     align-items: center;
     gap: 10px;
-    color: #1e293b;
+    color: #1e3f71;
     font-size: 1.5rem;
     font-weight: bold;
 }
@@ -112,3 +112,74 @@ header {
     margin-bottom: 20px;
 }
 
+.welcomeSection {
+    width: 100%;
+    max-width: 720px;
+}
+
+.welcomeContent {
+    color: #6e6e84;
+    font-size: 1.05rem;
+    margin-bottom: 28px;
+}
+
+.welcomeSection button {
+    background-color: #1e3f71;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 13px 28px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.welcomeSection button:hover {
+    background-color: #1e293b;
+    transform: translateY(-2px);
+}
+
+.sectionTitle {
+    margin-bottom: 50px;
+    text-align: center;
+}
+/*Features*/
+
+.featureContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.featureCard {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.feature {
+    padding: 30px;
+    border: 1px solid #eae9f3;
+    border-radius: 14px;
+    background-color: #fff;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(45, 35, 100, 0.09);
+}
+
+.feature i {
+    width: 30px;
+    height: 30px;
+    color:#1e3f71;
+    margin-bottom: 18px;
+}
+
+.featureTitle {
+    margin-bottom: 10px;
+}
+
+.featureDescription {
+    color: #77778b;
+    font-size: 0.95rem;
+}
