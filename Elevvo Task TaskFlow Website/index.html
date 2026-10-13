@@ -20,17 +20,37 @@
 
             <!--Header of the app-->
             <header>
-                <h1 class="pageTitle">Task Flow</h1>
+                <nav class="container">
+                    <a href="#home" class="logo">
+                        <i data-lucide="check"></i>
+                        Task Flow
+                    </a>
+
+                <button class="menu-toggle" id="menuToggle"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false">
+                    <i data-lucide="menu"></i>
+                </button>
+
+                    <div class="class-links" id="navLinks">
+                        <a href="#featureSection">Features</a>
+                        <a href="#reviewSection">Reviews</a>
+                        <a href="#pricingSection">Pricing</a>
+                        <a href="#contact-links">Contact</a>
+                    </div>
+                </nav>
             </header>
 
 
             <!-- A top section with the app name, a short message, and a button-->
-            <section class="appIntro">
+            <section class="appIntro" id="home">
                 <h1 class="appTitle">Task Flow</h1>
 
                 <div class="welcomeSection">
                     <p class="welcomeContent">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                       Organize your taks, manage your time, and stay productive
+                       with Task Flow. Keep track of your daily goals, prioritize important work, 
+                       and accomplish more efficiently.
                     </p>
 
                     <button type="button">Let's Start</button>
@@ -39,25 +59,25 @@
 
 
             <!--A section that shows 3 features of the app (each with an icon and description-->
-            <section class="featureSection">
+            <section class="featureSection" id="featureSection">
                 <div class="featureContainer">
                     <div class="featureCard">
                         <div class="feature">
-                            <i data-lucide="house"></i>
-                            <h2 class="featureTitle">Title</h2>
-                            <p class="featureDescription">Description</p>
+                            <i data-lucide="list-checks"></i>
+                            <h2 class="featureTitle">Task Management</h2>
+                            <p class="featureDescription">Create, organize, and manage your taks in one convenient place.</p>
                         </div>
 
                         <div class="feature">
-                            <i data-lucide="house"></i>
-                            <h2 class="featureTitle">Title</h2>
-                            <p class="featureDescription">Description</p>
+                            <i data-lucide="calendar-days"></i>
+                            <h2 class="featureTitle">Schedule Planning</h2>
+                            <p class="featureDescription">Set deadlines and plan your schedule to stay on top of your responsibilities.</p>
                         </div>
 
                         <div class="feature">
-                            <i data-lucide="house"></i>
-                            <h2 class="featureTitle">Title</h2>
-                            <p class="featureDescription">Description</p>
+                            <i data-lucide="chart-no-axes-column-increasing"></i>
+                            <h2 class="featureTitle">Track Progress</h2>
+                            <p class="featureDescription">Monitor completed tasks and celebrate your progress toward your goals.</p>
                         </div>
                     </div>
                 </div>
@@ -65,17 +85,17 @@
 
 
             <!--A section with 2–3 reviews or quotes from happy users-->
-            <section class="reviewSection">
+            <section class="reviewSection" id="reviewSection">
                 <div class="reviewContainer">
                     <div class="reviewCard">
                         <div class="reviewArea">
                             <h2 class="userName">John Doe</h2>
-                            <p class="quoteContent"> loremndjnaskdbjaldjkajvaddad</p>
+                            <p class="quoteContent"> "Task Flow helps me organie my daily tasks and meet my deadlines. It makes my day much easier to manage."/p>
                         </div>
 
                         <div class="reviewArea">
                             <h2 class="userName">Jane Doe</h2>
-                            <p class="quoteContent"> loremndjnaskdbjaldjkajvaddad</p>
+                            <p class="quoteContent">"I love having everything in one place. Task Flow Task Flow helps me stay focused and keep track of my goals.</p>
                         </div>
                     </div>
                 </div>
@@ -83,14 +103,16 @@
 
 
             <!--A section with 3 pricing options (for example: Free, Pro, Team)-->
-            <section class="pricingSection">
+            <section class="pricingSection" id="pricingSection">
                 <div class="pricingContainer">
                     <div class="pricingCard">
                         <div class="pricing-col">
                             <h2 class="priceTitle">Free</h2>
                             <h3 class="benefitsTitle">Benefits:</h3>
                             <ul class="priceBenefits">
-                                <li></li>
+                                <li>Basic task management</li>
+                                <li>Daily to-do lists</li>
+                                <li>Progress tracking</li>
                             </ul>
                         </div>
 
@@ -98,7 +120,10 @@
                             <h2 class="priceTitle">Pro</h2>
                             <h3 class="benefitsTitle">Benefits:</h3>
                             <ul class="priceBenefits">
-                                <li></li>
+                                <li>Unlimited tasks</li>
+                                <li>Priority Settings</li>
+                                <li>Advanced progress reports</li>
+                                <li>Free benefits</li>
                             </ul>
                         </div>
 
@@ -106,7 +131,10 @@
                             <h2 class="priceTitle">Team</h2>
                             <h3 class="benefitsTitle">Benefits:</h3>
                             <ul class="priceBenefits">
-                                <li></li>
+                                <li>Shared task lists</li>
+                                <li>Team collaboration</li>
+                                <li>Team progress tracking</li>
+                                <li>Free and Pro benefits</li>
                             </ul>
                         </div>
                     </div>
@@ -116,9 +144,9 @@
             <!--A footer with contact links and social media icons-->
             <footer class="site-footer">
                 <div class="footer-col">
-                    <h4>Contact Us</h4>
+                    <h4 id="contact-links">Contact Us</h4>
                     <ul class="contact-links">
-                        <li>Email: <a href="mailto:support@yourbrand.com">support@yourbrand.com</a></li>
+                        <li>Email: <a href="mailto:support@yourbrand.com">support@ytaskflow.com</a></li>
                         <li>Phone: <a href="tel:+18005550199">+1 (800) 555-0199</a></li>
                         <li>Address: 123 Main Street, City, State</li>
                         <li><a href="/contact">Send us a message (Form)</a></li>
@@ -129,16 +157,20 @@
                     <h4>Follow Us</h4>
 
                     <div class="social-icons">
-                        <a href="https://twitter.com" target="_blank">Twitter</a> |
-                        <a href="https://instagram.com" target="_blank">Instagram</a> |
-                        <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a> |
+                        <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer">Tiktok</a> |
+                        <a href="https://Twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a> |
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a> |
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                     </div>
                 </div>
-
             </footer>
 
-
         </div>
+
+        <script src="script.js"></script>
+
+
     </body>
 
 </html>
