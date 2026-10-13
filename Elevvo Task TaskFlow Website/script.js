@@ -30,3 +30,24 @@ navLinks.querySelectorAll("a").forEach(function (link) {
 });
 
 lucide.createIcons();
+
+
+// Animate sections when they appear while scrolling
+const sections = document.querySelectorAll(
+    ".appIntro, .featureSection, .reviewSection, .pricingSection, .site-footer"
+);
+
+const observer = new IntersectionObserver(function (entries, observer) {
+    entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+            observer.unobserve(entry.target);
+        }
+    });
+}, {
+    threshold: 0.1
+});
+
+sections.forEach(function (section) {
+    observer.observe(section);
+});

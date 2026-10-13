@@ -416,3 +416,37 @@ header {
         gap: 30px;
     }
 }
+
+/* SCROLL REVEAL ANIMATION */
+.appIntro,
+.featureSection,
+.reviewSection,
+.pricingSection,
+.site-footer {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+/* Applied when a section enters the viewport */
+.appIntro.show,
+.featureSection.show,
+.reviewSection.show,
+.pricingSection.show,
+.site-footer.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .appIntro,
+    .featureSection,
+    .reviewSection,
+    .pricingSection,
+    .site-footer {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
