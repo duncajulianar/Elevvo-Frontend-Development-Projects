@@ -314,3 +314,106 @@ header {
     color: #b7aaff;
 }
 
+/* MOBILE BACKDROP */
+.backdrop {
+    display: none;
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+    section {
+        padding: 65px 5%;
+    }
+
+    .featureCard,
+    .pricingCard {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .site-footer {
+        padding: 45px 5%;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .container {
+        min-height: 68px;
+        padding: 0 5%;
+    }
+
+    .logo {
+        font-size: 1.3rem;
+    }
+
+    .menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px;
+        z-index: 1002;
+    }
+
+    .menu-toggle i {
+        width: 25px;
+        height: 25px;
+    }
+
+    .class-links {
+        display: none;
+        position: absolute;
+        top: 68px;
+        left: 0;
+        width: 100%;
+        padding: 25px 5%;
+        background-color: #ffffff;
+        border-top: 1px solid #eeeeF5;
+        box-shadow: 0 12px 20px rgba(30, 25, 70, 0.08);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+        z-index: 1001;
+    }
+
+    .class-links.active {
+        display: flex;
+    }
+
+    .class-links a {
+        padding: 5px 0;
+    }
+
+    section {
+        padding: 55px 5%;
+    }
+
+    .appIntro {
+        min-height: 390px;
+    }
+
+    .appTitle {
+        font-size: 2.5rem;
+    }
+
+    .welcomeContent {
+        font-size: 0.95rem;
+    }
+
+    .featureCard,
+    .reviewCard,
+    .pricingCard {
+        grid-template-columns: 1fr;
+    }
+
+    .feature,
+    .reviewArea,
+    .pricing-col {
+        padding: 25px;
+    }
+
+    .site-footer {
+        grid-template-columns: 1fr;
+        padding: 40px 5%;
+        gap: 30px;
+    }
+}
